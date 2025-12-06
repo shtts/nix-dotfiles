@@ -1,21 +1,31 @@
-{ config, nixpkgs, ... }:
+{ config, pkgs, ... }:
 {
   programs.vesktop = {
     enable = true;
-    vencord.settings = {
-      plugins = {
-        MessageLogger = {
-          enabled = true;
-        };
-        FakeNitro.enabled = true;
-	CrashHandler.enable = true;
-	FullSearchContext.enable = true;
-	SilentTyping.enable = true;
-	VoiceMessages.enable = true;
-	YoutubeAdblock.enable = true;
-	WhoReacted.enable = true;
+    vencord = {
+      themes = {
+        "nordic" = builtins.readFile (
+          pkgs.fetchurl {
+            url = "https://raw.githubusercontent.com/orblazer/discord-nordic/refs/heads/master/nordic.theme.css";
+            sha256 = "";
+          }
+        );
       };
-
     };
+  };
+  settings = {
+    plugins = {
+      MessageLogger = {
+        enabled = true;
+      };
+      FakeNitro.enabled = true;
+      CrashHandler.enable = true;
+      FullSearchContext.enable = true;
+      SilentTyping.enable = true;
+      VoiceMessages.enable = true;
+      YoutubeAdblock.enable = true;
+      WhoReacted.enable = true;
+    };
+
   };
 }

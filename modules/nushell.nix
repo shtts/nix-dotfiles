@@ -26,7 +26,7 @@
       con = "nvim ~/.config/nixos/configuration.nix";
       build = "sudo nixos-rebuild switch --flake ~/dotfiles/.config/nixos#tomtom --upgrade";
       hm = "cd ~/.config/home-manager";
-      hms = "home-manager switch -b backup --show-trace --flake";
+      hms = "home-manager switch -b backup --show-trace";
       upd = "nix flake update";
     };
   };
