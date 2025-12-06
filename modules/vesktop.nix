@@ -24,6 +24,7 @@
         VoiceMessages.enable = true;
         YoutubeAdblock.enable = true;
         WhoReacted.enable = true;
+	enabledThemes = [ "nordic.css" ];
       };
 
     };
