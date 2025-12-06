@@ -3,16 +3,14 @@
   programs.nushell = {
     enable = true;
     shellAliases = {
-      ns = "nix-search-tv print | fzf --preview 'nix-search-tv preview \\{}' --scheme history";
-      con = "nvim ~/.config/nixos/configuration.nix";
       c = "clear";
-      build = "sudo nixos-rebuild switch --flake ~/dotfiles/.config/nixos#tomtom --upgrade";
       z = "eza --icons";
       fs = "fastfetch";
       m = "microfetch";
       n = "nvim";
       b = "y ~/Books/";
       tmux = "tmux -f ~/.config/tmux/tmux.conf";
+
       # git aliases
       g = "git";
       gs = "git status";
@@ -23,6 +21,12 @@
       gl = "git pull";
       gco = "git checkout";
       gcb = "git checkout -b";
+
+      # nix specific aliases
+      con = "nvim ~/.config/nixos/configuration.nix";
+      build = "sudo nixos-rebuild switch --flake ~/dotfiles/.config/nixos#tomtom --upgrade";
+      hms = "home-manager switch -b backup --show-trace --flake ~/.config/home-manager";
+      upd = "nix flake update";
     };
   };
 }
