@@ -16,6 +16,7 @@
   imports = [
     ./modules/nixvim.nix
     ./modules/vicinae.nix
+    ./modules/nushell.nix
   ];
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -43,21 +44,6 @@
     enableNushellIntegration = true;
   };
 
-  programs.nushell = {
-    enable = true;
-    shellAliases = {
-      ns = "nix-search-tv print | fzf --preview 'nix-search-tv preview \\{}' --scheme history";
-      con = "nvim ~/.config/nixos/configuration.nix";
-      c = "clear";
-      build = "sudo nixos-rebuild switch --flake ~/dotfiles/.config/nixos#tomtom --upgrade";
-      z = "eza --icons";
-      fs = "fastfetch";
-      m = "microfetch";
-      n = "nvim";
-      b = "y ~/Books/";
-      tmux = "tmux -f ~/.config/tmux/tmux.conf";
-    };
-  };
   home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
