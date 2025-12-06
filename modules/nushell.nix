@@ -19,6 +19,7 @@
       ga = "git add .";
       gc = "git commit -m";
       gp = "git push";
+      gpo = "git push -u origin";
       gl = "git pull";
       gco = "git checkout";
       gcb = "git checkout -b";
