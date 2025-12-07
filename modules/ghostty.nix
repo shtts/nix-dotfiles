@@ -2,7 +2,7 @@
 {
   programs.ghostty = {
     enable = true;
-    systemd.enable = pkgs.stdenv.isLinux;
+    systemd.enable = true;
     settings = {
       theme = "Nord";
     };
