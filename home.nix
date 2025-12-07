@@ -21,7 +21,6 @@
     ./modules/vesktop.nix
     ./modules/foot.nix
     ./modules/kitty.nix
-    ./modules/dms.nix
     ./modules/obsidian.nix
   ];
   # This value determines the Home Manager release that your configuration is
