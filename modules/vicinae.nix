@@ -1,5 +1,6 @@
 {
   pkgs,
+  lib,
   ...
 }:
 {
@@ -21,5 +22,10 @@
     Install = {
       WantedBy = [ "graphical-session.target" ];
     };
+  };
+  home.activation = {
+    restartVicinae = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+      $DRY_RUN_CMD systemctl --user restart vicinae.service
+    '';
   };
 }
