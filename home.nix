@@ -41,6 +41,12 @@
 
   programs.yazi = {
     enable = true;
+    settings = {
+      preview = {
+        image_filter = "nearest";
+        image_quality = 80;
+      };
+    };
     enableNushellIntegration = true;
     shellWrapperName = "y";
   };
