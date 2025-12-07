@@ -14,18 +14,10 @@
       After = [ "graphical-session.target" ];
     };
 
-    Service = {
-      ExecStart = "${pkgs.vicinae}/bin/vicinae server --replace";
-      Restart = "always";
+    home.activation = {
+      restartVicinae = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+      $DRY_RUN_CMD nohup ${pkgs.vicinae}/bin/vicinae server --replace >/dev/null 2>&1 & disown
+      '';
     };
-
-    Install = {
-      WantedBy = [ "graphical-session.target" ];
-    };
-  };
-  home.activation = {
-    restartVicinae = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-      $DRY_RUN_CMD systemctl --user restart vicinae.service
-    '';
   };
 }
