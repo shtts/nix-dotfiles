@@ -20,7 +20,6 @@
     ./modules/nushell.nix
     ./modules/vesktop.nix
     ./modules/foot.nix
-    ./modules/ghostty.nix
     ./modules/kitty.nix
   ];
   # This value determines the Home Manager release that your configuration is
