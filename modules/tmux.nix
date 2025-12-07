@@ -18,6 +18,8 @@
         extraConfig = ''
           set -g @continuum-restore 'on'
           set -g @continuum-save-interval '10' # Save every 10 minutes
+          set -g allow-passthrough on
+          set -g visual-activity off
         '';
       }
     ];
