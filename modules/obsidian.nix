@@ -6,6 +6,10 @@
       "thoughts haven" = {
         enable = true;
         settings = {
+          corePlugins = {
+            templates = true;
+          };
+
           hotkeys = {
             "file-explorer:new-folder" = [
               {
@@ -14,6 +18,15 @@
                   "Mod"
                   "Alt"
                 ];
+              }
+            ];
+            "templates:insert-template" = [
+              {
+                key = "T";
+                modifiers = [
+                  "Mod"
+                  "Alt"
+                ]; # Ctrl + Alt + T
               }
             ];
           };
