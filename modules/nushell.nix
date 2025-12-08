@@ -4,7 +4,6 @@
     enable = true;
     shellAliases = {
       c = "clear";
-      z = "eza --icons";
       fs = "fastfetch";
       m = "microfetch";
       n = "nvim";
