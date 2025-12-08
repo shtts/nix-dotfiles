@@ -11,6 +11,7 @@
       nixfmt-rfc-style
     ];
     opts = {
+      guifont = "JetBrainsMono Nerd Font:h14";
       number = true;
       relativenumber = true;
     };

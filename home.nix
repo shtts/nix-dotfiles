@@ -58,13 +58,6 @@
   };
   programs.neovide = {
     enable = true;
-    settings = {
-      font = {
-        normal = [ ];
-        size = 4.0;
-      };
-
-    };
   };
 
   home.packages = with pkgs; [
