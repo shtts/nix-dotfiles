@@ -34,7 +34,10 @@
 
   programs.zen-browser.enable = true;
 
-programs.man.enable = true;
+  programs.man = {
+    enable = true;
+    generateCaches = true;
+  };
   programs.noti = {
     enable = true;
   };
@@ -120,7 +123,7 @@ programs.man.enable = true;
   #  /etc/profiles/per-user/zoomer/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    EDITOR = "hx";
+    EDITOR = "nvim";
   };
 
   # Let Home Manager install and manage itself.
