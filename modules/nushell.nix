@@ -2,6 +2,9 @@
 {
   programs.nushell = {
     enable = true;
+    configFile = ''
+      $env.config.edit_mode = "vi" ;
+    '';
     shellAliases = {
       c = "clear";
       fs = "fastfetch";
