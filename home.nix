@@ -79,6 +79,7 @@
     pkg:
     builtins.elem (lib.getName pkg) [
       "etlegacy"
+      "etlegacy-assets"
       "obsidian"
     ];
 
