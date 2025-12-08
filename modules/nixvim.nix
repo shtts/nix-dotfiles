@@ -5,11 +5,11 @@
   programs.nixvim = {
     enable = true;
     globals = {
-    neovide_padding_top = 10;
-    neovide_padding_bottom = 10;
-    neovide_padding_left = 10;
-    neovide_padding_right = 10;
-  };
+      neovide_padding_top = 10;
+      neovide_padding_bottom = 10;
+      neovide_padding_left = 10;
+      neovide_padding_right = 10;
+    };
 
     enableMan = false;
     colorschemes.nord.enable = true;
@@ -44,6 +44,7 @@
     ];
 
     plugins = {
+      toggleterm.enable = true;
       telescope = {
         enable = true;
         settings = {
