@@ -4,6 +4,13 @@
 
   programs.nixvim = {
     enable = true;
+    globals = {
+    neovide_padding_top = 10;
+    neovide_padding_bottom = 10;
+    neovide_padding_left = 10;
+    neovide_padding_right = 10;
+  };
+
     enableMan = false;
     colorschemes.nord.enable = true;
 
@@ -11,7 +18,7 @@
       nixfmt-rfc-style
     ];
     opts = {
-      guifont = "JetBrainsMono Nerd Font:h14";
+      guifont = "JetBrainsMono Nerd Font:h12";
       number = true;
       relativenumber = true;
     };
