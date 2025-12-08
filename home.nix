@@ -34,6 +34,7 @@
 
   programs.zen-browser.enable = true;
 
+programs.man.enable = true;
   programs.noti = {
     enable = true;
   };
