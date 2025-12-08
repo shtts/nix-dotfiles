@@ -37,7 +37,6 @@
       };
     };
     defaultSettings = {
-      themes = [ "gruvbox" ];
       app = {
         vimMode = true;
       };
