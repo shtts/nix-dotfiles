@@ -28,6 +28,12 @@
     ];
 
     plugins = {
+      plugins.telescope = {
+        enable = true;
+        keymaps = {
+          "<leader>m" = "man_pages";
+        };
+      };
       which-key = {
         enable = true;
         settings = {
