@@ -1,19 +1,15 @@
 {
-  description = "Home Manager configuration of zoomer";
+  description = "basic flake config";
 
   inputs = {
-    # Specify the source of Home Manager and Nixpkgs.
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    nixpkgs-blender.url = "github:nixos/nixpkgs/81b970640e56a5c07a336d2c05018b0c9bf57a51";
 
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
@@ -23,36 +19,48 @@
       };
     };
 
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    mangowc = {
+      url = "github:DreamMaoMao/mangowc";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs =
-    {
+    inputs@{
+      stylix,
+      mangowc,
+      self,
       nixpkgs,
       home-manager,
-      nixpkgs-blender,
       ...
-    }@inputs:
-    let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-      pkgs-blender = nixpkgs-blender.legacyPackages.${system};
-    in
+    }:
     {
-      homeConfigurations."zoomer" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = {
-          pkgs-blender = pkgs-blender;
-          inherit inputs;
-        };
 
-        # Specify your home configuration modules here, for example,
-        # the path to your home.nix.
+      nixosConfigurations.tomtom = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs self; };
         modules = [
-          ./home.nix
-        ];
+          ./configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.jdoe = ./home.nix;
+          }
+          ./noctalia.nix
+          mangowc.nixosModules.mango
+          stylix.nixosModules.stylix
 
-        # Optionally use extraSpecialArgs
-        # to pass through arguments to home.nix
+        ];
       };
     };
 }

@@ -15,13 +15,13 @@
 
   imports = [
     inputs.zen-browser.homeModules.beta
-    ./modules/nixvim.nix
-    ./modules/vicinae.nix
-    ./modules/nushell.nix
-    ./modules/vesktop.nix
-    ./modules/foot.nix
-    ./modules/kitty.nix
-    ./modules/tmux.nix
+    ./HMmodules/nixvim.nix
+    ./HMmodules/vicinae.nix
+    ./HMmodules/nushell.nix
+    ./HMmodules/vesktop.nix
+    ./HMmodules/foot.nix
+    ./HMmodules/kitty.nix
+    ./HMmodules/tmux.nix
   ];
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
