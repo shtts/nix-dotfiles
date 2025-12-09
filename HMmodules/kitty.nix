@@ -1,11 +1,11 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   programs.kitty = {
     enable = true;
     themeFile = "Nord";
 
     font = {
-      name = "JetBrainsMono Nerd Font";
+      name = lib.mkForce "JetBrainsMono Nerd Font";
       size = 12;
     };
 

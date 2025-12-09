@@ -45,7 +45,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
 
-    users.tomtom = {
+    users.zoomer = {
       imports = [ ./home.nix ];
     };
   };
