@@ -57,7 +57,7 @@
     targets.nixvim.enable = false;
     targets.qt.enable = true;
     targets.grub.enable = false;
-    image = /home/zoomer/Pictures/wallpapers/earth-in-space.png;
+    image = ./earth-in-space.png;
   };
 
   programs.thunar = {

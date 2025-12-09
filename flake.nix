@@ -54,7 +54,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.jdoe = ./home.nix;
+            home-manager.users.zoomer = ./home.nix;
           }
           ./NIXOSmodules/noctalia.nix
           mangowc.nixosModules.mango
