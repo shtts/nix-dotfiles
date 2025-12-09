@@ -5,7 +5,7 @@
     themeFile = "Nord";
 
     font = {
-      name = lib.mkForce "JetBrainsMono Nerd Font";
+      name =  "JetBrainsMono Nerd Font";
       size = 12;
     };
 

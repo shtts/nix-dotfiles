@@ -49,16 +49,6 @@
       imports = [ ./home.nix ];
     };
   };
-  stylix = {
-    enable = true;
-    enableReleaseChecks = false;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
-    targets.fish.enable = false;
-    targets.nixvim.enable = false;
-    targets.qt.enable = true;
-    targets.grub.enable = false;
-    image = ./earth-in-space.png;
-  };
 
   programs.thunar = {
     enable = true;

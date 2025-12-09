@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, ... }:
 let
   nord = pkgs.fetchurl {
     url = "https://codeberg.org/dnkl/foot/raw/branch/master/themes/nord";
@@ -10,7 +10,7 @@ in
     enable = true;
     settings = {
       main = {
-        font = lib.mkForce "JetBrainsMono Nerd Font Mono:size=12";
+        font =  "JetBrainsMono Nerd Font Mono:size=12";
         pad = "10x10";
         include = "${nord}";
       };

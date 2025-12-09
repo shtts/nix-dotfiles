@@ -19,11 +19,6 @@
       };
     };
 
-    stylix = {
-      url = "github:nix-community/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     mangowc = {
       url = "github:DreamMaoMao/mangowc";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -37,7 +32,6 @@
 
   outputs =
     inputs@{
-      stylix,
       mangowc,
       self,
       nixpkgs,
@@ -58,7 +52,6 @@
           }
           ./NIXOSmodules/noctalia.nix
           mangowc.nixosModules.mango
-          stylix.nixosModules.stylix
 
         ];
       };
