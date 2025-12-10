@@ -72,6 +72,7 @@
     chafa
     obsidian
     crush
+    claude-code
     # etlegacy
 
     # # It is sometimes useful to fine-tune packages, for example, by applying

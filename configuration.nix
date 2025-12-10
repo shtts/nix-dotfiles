@@ -115,7 +115,7 @@
   services.miniflux = {
     enable = true;
     package = pkgs.miniflux;
-    adminCredentialsFile = "./miniflux-admin";
+    adminCredentialsFile = "/home/zoomer/.config/nix/miniflux-admin";
   };
   # self-hosted things
   # services.freshrss = {
