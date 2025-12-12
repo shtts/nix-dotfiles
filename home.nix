@@ -1,9 +1,7 @@
 {
   inputs,
-  config,
   pkgs,
   lib,
-  pkgs-blender,
   ...
 }:
 
@@ -15,15 +13,7 @@
 
   imports = [
     inputs.zen-browser.homeModules.beta
-    ./HMmodules/nixvim/nixvim.nix
-    ./HMmodules/nixvim/keymaps.nix
-    ./HMmodules/vicinae.nix
-    ./HMmodules/nushell.nix
-    ./HMmodules/vesktop.nix
-    ./HMmodules/foot.nix
-    ./HMmodules/kitty.nix
-    ./HMmodules/tmux.nix
-    ./HMmodules/flatpak.nix
+    ./HMmodules/default.nix
   ];
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -49,10 +39,12 @@
     enableNushellIntegration = true;
     shellWrapperName = "y";
   };
+
   programs.zoxide = {
     enable = true;
     enableNushellIntegration = true;
   };
+  programs.fd.enable = true;
 
   programs.lazygit = {
     enable = true;
@@ -61,7 +53,6 @@
   programs.neovide = {
     enable = true;
   };
-
 
   home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
@@ -76,6 +67,7 @@
     obsidian
     qwen-code
     audacity
+    fd
     # etlegacy
 
     # # It is sometimes useful to fine-tune packages, for example, by applying

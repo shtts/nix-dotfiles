@@ -27,6 +27,7 @@
       m = "microfetch";
       n = "nvim";
       b = "y ~/Books/";
+      cd = "z";
 
       # git aliases
       g = "git";

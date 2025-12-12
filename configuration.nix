@@ -270,7 +270,6 @@
       prismlauncher
       wallabag
       heroic
-      lutris
       faugus-launcher
       nix-ld
       steam-run
