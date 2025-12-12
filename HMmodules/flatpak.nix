@@ -11,6 +11,7 @@
     packages = [
       "org.gnome.gitlab.ilhooq.Bookup"
      "io.github.redddfoxxyy.samaya" 
+     "com.github.johnfactotum.Foliate"
     ];
 
     uninstallUnmanaged = false;
