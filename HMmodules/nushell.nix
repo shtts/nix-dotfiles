@@ -28,6 +28,7 @@
       n = "nvim";
       b = "y ~/Books/";
       cd = "z";
+      ne = "neovide";
 
       # git aliases
       g = "git";
