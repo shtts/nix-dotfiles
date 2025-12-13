@@ -20,6 +20,7 @@
     };
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    affinity-nix.url = "github:mrshmllow/affinity-nix";
 
     mangowc = {
       url = "github:DreamMaoMao/mangowc";
@@ -38,6 +39,7 @@
       self,
       nixpkgs,
       home-manager,
+      affinity-nix,
       ...
     }:
     {
@@ -52,6 +54,7 @@
             home-manager.useUserPackages = true;
             home-manager.users.zoomer = ./home.nix;
             home-manager.backupFileExtension = "backup";
+            home.packages = [ affinity-nix.packages.x86_64-linux.v3 ];
           }
           ./NIXOSmodules/noctalia.nix
           mangowc.nixosModules.mango
