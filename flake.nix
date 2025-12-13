@@ -20,6 +20,7 @@
     };
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    affinity-nix.url = "github:mrshmllow/affinity-nix";
 
     mangowc = {
       url = "github:DreamMaoMao/mangowc";
@@ -38,6 +39,7 @@
       self,
       nixpkgs,
       home-manager,
+      affinity-nix,
       ...
     }:
     {
@@ -47,6 +49,9 @@
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager
+          {
+            environment.systemPackages = [ affinity-nix.packages.x86_64-linux.v3 ];
+          }
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
