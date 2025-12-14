@@ -19,12 +19,12 @@
         plugins = {
           MessageLogger.enabled = true;
           FakeNitro.enabled = true;
-          CrashHandler.enable = true;
-          FullSearchContext.enable = true;
-          SilentTyping.enable = true;
-          VoiceMessages.enable = true;
-          YoutubeAdblock.enable = true;
-          WhoReacted.enable = true;
+          CrashHandler.enabled = true;
+          FullSearchContext.enabled = true;
+          SilentTyping.enabled = true;
+          VoiceMessages.enabled = true;
+          YoutubeAdblock.enabled = true;
+          WhoReacted.enabled = true;
         };
       };
     };

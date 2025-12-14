@@ -36,6 +36,12 @@
     enableNushellIntegration = true;
   };
 
+  programs.atuin = {
+    enable = true;
+    daemon.enable = true;
+    enableNushellIntegration = true;
+  };
+
   programs.noti = {
     enable = true;
   };
