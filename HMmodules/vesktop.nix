@@ -7,7 +7,7 @@
       themes = {
         "nordic" = builtins.readFile (
           pkgs.fetchurl {
-            url = "https://raw.githubusercontent.com/orblazer/discord-nordic/refs/heads/master/nordic.theme.css";
+            url = "https://raw.githubusercontent.com/orblazer/discord-nordic/9f7aeaa467c1075518fb3b9897a104e912748a45/nordic.theme.css";
             sha256 = "sha256-KExcIUWLit9MQC2KBYioP6EPXW+2ivnjuhZcNfmzd4s=";
           }
         );
