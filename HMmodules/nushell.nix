@@ -1,4 +1,9 @@
-{ pkgs,config, nixpkgs, ... }:
+{
+  pkgs,
+  config,
+  nixpkgs,
+  ...
+}:
 {
   programs.nushell = {
     enable = true;
@@ -16,9 +21,9 @@
       QT_AUTO_SCREEN_SCALE_FACTOR = "1";
       QT_QPA_PLATFORM = "Wayland;xcb";
     };
-  plugins = [ 
-    pkgs.nushellPlugins.gstat 
-  ];
+    plugins = [
+      pkgs.nushellPlugins.gstat
+    ];
 
     extraConfig = ''
       $env.config.edit_mode = "vi" ;
