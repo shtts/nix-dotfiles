@@ -84,6 +84,7 @@
     steam-tui
     steamcmd
     quickshell
+    spotify
     spicetify-cli
     # etlegacy
 
