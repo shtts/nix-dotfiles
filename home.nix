@@ -80,6 +80,8 @@
     qwen-code
     audacity
     fd
+    steam-tui
+    steamcmd
     # etlegacy
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
