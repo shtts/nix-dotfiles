@@ -109,7 +109,10 @@
     atuin.enable = true;
     blueman.enable = true;
     keyd.enable = true;
-    jellyfin.enable = true;
+    jellyfin = {
+      enable = true;
+      user = "zoomer";
+    };
     upower.enable = true;
   };
 
