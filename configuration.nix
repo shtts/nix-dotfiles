@@ -109,6 +109,7 @@
     atuin.enable = true;
     blueman.enable = true;
     keyd.enable = true;
+    jellyfin.enable = true;
     upower.enable = true;
   };
 

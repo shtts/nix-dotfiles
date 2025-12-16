@@ -87,6 +87,10 @@
     spotify
     spicetify-cli
     psst
+    bootdev-cli
+    jellyfin
+    jellyfin-web
+    jellyfin-ffmpeg
     # etlegacy
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
