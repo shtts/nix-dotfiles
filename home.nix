@@ -91,6 +91,7 @@
     jellyfin
     jellyfin-web
     jellyfin-ffmpeg
+    popcorntime
     # etlegacy
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
