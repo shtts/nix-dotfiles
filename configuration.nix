@@ -374,6 +374,11 @@
   programs.kdeconnect.enable = true;
   # gaming
 
+  programs.opengamepadui = {
+    enable = true;
+    inputplumber.enable = true;
+  };
+
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
