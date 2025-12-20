@@ -109,6 +109,7 @@
     atuin.enable = true;
     blueman.enable = true;
     keyd.enable = true;
+    inputplumber.enable = true;
     espanso = {
       enable = true;
       package = pkgs.espanso-wayland;
@@ -230,6 +231,7 @@
       "docker"
       "networkmanager"
       "wheel"
+      "input"
     ];
     packages = with pkgs; [
       wget
