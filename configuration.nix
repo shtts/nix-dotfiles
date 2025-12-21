@@ -27,9 +27,8 @@
 
   programs.mango.enable = true;
   programs.niri.enable = true;
-  services.flatpak.enable = true;
-
   services.noctalia-shell.enable = true;
+  services.flatpak.enable = true;
 
   nix.optimise.automatic = true;
 
@@ -57,7 +56,6 @@
       thunar-volman
     ];
   };
-  programs.neovim.enable = true;
 
   xdg.mime = {
     enable = true;
@@ -109,7 +107,6 @@
     atuin.enable = true;
     blueman.enable = true;
     keyd.enable = true;
-    inputplumber.enable = true;
     espanso = {
       enable = true;
       package = pkgs.espanso-wayland;
@@ -231,7 +228,6 @@
       "docker"
       "networkmanager"
       "wheel"
-      "input"
     ];
     packages = with pkgs; [
       wget
@@ -373,11 +369,6 @@
 
   programs.kdeconnect.enable = true;
   # gaming
-
-  programs.opengamepadui = {
-    enable = true;
-    inputplumber.enable = true;
-  };
 
   hardware.graphics = {
     enable = true;

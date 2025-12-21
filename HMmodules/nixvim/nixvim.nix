@@ -28,6 +28,12 @@
     globals.mapleader = " ";
 
     plugins = {
+      todo-comments.enable = true;
+
+      flash = {
+        enable = true;
+      };
+
       toggleterm.enable = true;
       nvim-surround.enable = true;
       telescope = {
