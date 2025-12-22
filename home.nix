@@ -35,6 +35,8 @@
     enable = true;
   };
 
+  programs.jujutsu.enable = true;
+
   programs.atuin = {
     enable = true;
     daemon.enable = true;
@@ -76,8 +78,6 @@
     qwen-code
     audacity
     fd
-    steam-tui
-    steamcmd
     quickshell
     spotify
     spicetify-cli
@@ -87,7 +87,7 @@
     jellyfin-web
     jellyfin-ffmpeg
     popcorntime
-    inputplumber
+    unixtools.xxd
     # etlegacy
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
