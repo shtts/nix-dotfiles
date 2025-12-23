@@ -7,6 +7,7 @@
     preferAbbrs = true;
     interactiveShellInit = ''
       fish_vi_key_bindings
+      set -g fish_completion_matching ignore-case
     '';
 
     shellAbbrs = {
